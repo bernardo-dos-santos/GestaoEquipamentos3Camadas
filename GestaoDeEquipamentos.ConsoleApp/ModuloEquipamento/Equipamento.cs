@@ -18,6 +18,10 @@ public class Equipamento
 
     public string ObterNumeroSerie()
     {
+        if (Nome.Length < 3)
+        {
+            Nome = Nome + "aaa";
+        }
         string tresPrimeirosCaracteres = Nome.Substring(0, 3).ToUpper();
         
         return $"{tresPrimeirosCaracteres}-{Id}";

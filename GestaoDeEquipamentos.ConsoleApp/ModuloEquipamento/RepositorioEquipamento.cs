@@ -72,4 +72,22 @@ public class RepositorioEquipamento
 
         return null;
     }
+
+    public int RegistrarMesmoFabricante(string nome)
+    {
+        int mesmoFabricante = 0;
+        for (int i = 0; i < equipamentos.Length; i++)
+        {
+            Equipamento e = equipamentos[i];
+
+            if (e == null)
+                continue;
+                if (e.Fabricante.ToUpper() == nome.ToUpper())
+                {
+                    mesmoFabricante++;
+                }            
+        }
+        return mesmoFabricante;
+
+    }
 }

@@ -41,7 +41,7 @@ public class TelaChamado
 
         Console.WriteLine("Cadastrando Chamado...");
         Console.WriteLine("--------------------------------------------");
-
+        
         Chamado novoChamado =  ObterDadosChamado();
 
         repositorioChamado.CadastrarChamado(novoChamado);
